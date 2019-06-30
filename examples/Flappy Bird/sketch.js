@@ -52,7 +52,7 @@ function draw() {
     neat.predict();
 
     for (let i = 0; i < TOTAL; i++) {
-      if (neat.population[i][3] === 1) {
+      if (neat.desicion(i) === 1) {
         birds[i].up();
       }
     }
