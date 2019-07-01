@@ -1,9 +1,3 @@
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
-
-// Neuro-Evolution Flappy Bird
-
 class Bird {
   constructor() {
     this.y = height / 2;
