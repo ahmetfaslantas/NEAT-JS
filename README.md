@@ -1,9 +1,8 @@
 # NEAT.js
-This is my first NEAT algorithm library for JS
 
+NeuroEvolution of Augmenting Topologies (NEAT) is a genetic algorithm (GA) for the generation of evolving artificial neural networks.
 
-
-This project of mine begun as me trying to understand neural evolution.
+This library implements this technology in JavaScript.
 
 
 ## Getting Started
@@ -12,6 +11,12 @@ In order to add this library in your project you need to add NEAT.js script into
 
 ```html
 <script src="/lib/NEAT.js"></script>
+```
+
+If you use Node.js you can add this module in your project like this:
+
+```js
+const NEAT = require('neat_net-js');
 ```
 
 ## Usage:
@@ -51,3 +56,10 @@ var neat2 = new NEAT([EXPORTED NETWORK GOES HERE WITHOUT BRACKETS!]);
 ```
 
 With this method you can continue your training from where you left off.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

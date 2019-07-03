@@ -1,0 +1,26 @@
+{
+  "name": "neat_net-js",
+  "version": "1.0.2",
+  "description": "A JavaScript library implementing the NEAT algorithm",
+  "main": "./lib/NEAT.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtensionShoe/NEAT-JS.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtensionShoe/NEAT-JS/issues"
+  },
+  "homepage": "https://github.com/ExtensionShoe/NEAT-JS#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
