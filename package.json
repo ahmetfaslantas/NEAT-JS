@@ -1,6 +1,6 @@
 {
   "name": "neat_net-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A JavaScript library implementing the NEAT algorithm",
   "main": "./lib/NEAT.js",
   "directories": {
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/ExtensionShoe/NEAT-JS.git"
   },
-  "author": "",
+  "author": "Ahmet Faruk ASLANTAS",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ExtensionShoe/NEAT-JS/issues"
@@ -22,5 +22,8 @@
   "homepage": "https://github.com/ExtensionShoe/NEAT-JS#readme",
   "devDependencies": {
     "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security"
   }
 }
