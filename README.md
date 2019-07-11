@@ -26,7 +26,7 @@ var neat = new NEAT([40, 60, 60, 3], 100, .001, 'sigmoid');
 
 // Parameters with order: Network structure, Population size, Mutation rate, Activation function (sigmoid or tanh.)
 
-for (var i = 0; i < [INPUT_LAYER_NODE_COUNT]; i++) {
+for (var i = 0; i < [CREATURE_COUNT]; i++) {
 	neat.setInputs(ARRAY(INPUT_LAYER_NODE_COUNT), i);  // Set inputs for the creature indexed i.
 }
 
