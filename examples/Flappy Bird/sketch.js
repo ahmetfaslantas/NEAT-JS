@@ -11,7 +11,7 @@ function setup() {
   for (let i = 0; i < TOTAL; i++) {
     birds[i] = new Bird();
   }
-  neat = new NEAT([5, 2], TOTAL, .06, "tanh");
+  neat = new NEAT([5, 2], TOTAL, .005, "tanh");
 }
 
 function draw() {
