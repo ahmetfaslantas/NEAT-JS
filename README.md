@@ -4,6 +4,9 @@ NeuroEvolution of Augmenting Topologies (NEAT) is a genetic algorithm (GA) for t
 
 This library implements this technology in JavaScript.
 
+![code coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg) ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg) ![issues](https://img.shields.io/github/issues/ExtensionShoe/NEAT-JS.svg)
+
+
 
 ## Getting Started
 
@@ -39,6 +42,34 @@ neat.doGen(); // Does 1 generation.
 
 ```
 
+
+## Functions: 
+```js
+neat.removeCreature(index)
+// Removes the creature indexed as: index.
+```
+
+```js
+neat.addCreature(weights, bias_weights)
+// Adds a new creature with declared weights.
+// Leave parameters blank to initialize it's weights randomly
+```
+
+```js
+neat.bestCreature()
+// Returns the best creature from the last generation.
+```
+
+```js
+neat.setFitness(score, index)
+// Set the fitness value of the creature indexed as: index.
+```
+
+```js
+neat.desicion(index)
+// Return the desicion of the creature indexed as: index.
+// Use this function if you have a classification problem.
+```
 
 ## Parsing an existing network:
 
