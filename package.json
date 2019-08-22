@@ -1,6 +1,6 @@
 {
   "name": "neat_net-js",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A JavaScript library implementing the NEAT algorithm",
   "main": "./lib/NEAT.js",
   "directories": {
@@ -32,6 +32,9 @@
 	"NEAT",
 	"Neuro Evolution",
 	"AI",
-	"Artificial Intelligence"
+	"Artificial Intelligence",
+	"Genetics",
+	"Genetic Algorithm",
+	"GA"
   ]
 }
