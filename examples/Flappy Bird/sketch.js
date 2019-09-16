@@ -1,9 +1,20 @@
-const TOTAL = 500;
+const TOTAL = 1000;
 let birds = [];
 let pipes = [];
 let counter = 0;
 let slider;
 let neat;
+
+let config = {
+	model: [
+		{nodeCount: 5, type: "input"},
+		{nodeCount: 2, type: "output", activationfunc: activation.SOFTMAX}
+	],
+	mutationRate: 0.1,
+	crossoverMethod: crossover.RANDOM,
+	mutationMethod: mutate.RANDOM,
+	populationSize: TOTAL
+};
 
 function setup() {
   createCanvas(640, 480);
@@ -11,7 +22,7 @@ function setup() {
   for (let i = 0; i < TOTAL; i++) {
     birds[i] = new Bird();
   }
-  neat = new NEAT([5, 2], TOTAL, .005, "relu");
+  neat = new NEAT(config);
 }
 
 function draw() {
@@ -49,10 +60,11 @@ function draw() {
       neat.setInputs(birds[i].inputss(pipes), i);
     }
 
-    neat.predict();
+    neat.feedForward();
 
+	let desicions = neat.getDesicions();
     for (let i = 0; i < TOTAL; i++) {
-      if (neat.desicion(i) === 1) {
+      if (desicions[i] === 1) {
         birds[i].up();
       }
     }
