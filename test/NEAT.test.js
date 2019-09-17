@@ -1,35 +1,34 @@
-const NEAT = require('../lib/NEAT.js');
 
 
-test('Does network math work correctlyfor 2 layers?', () => {
-	let { NEAT, activation, crossover, mutate } = require('./NEAT.js');
+test('Does network math work correctly?', () => {
+	let { NEAT, activation, crossover, mutate } = require('../lib/NEAT.js');
 
 	let config = {
 		model: [
-			{ nodeCount: 3, type: "input" },
-			{ nodeCount: 2, type: "output", activationfunc: activation.SOFTMAX }
+			{ nodeCount: 5, type: "input" },
+			{ nodeCount: 5, type: "hidden", activationfunc: activation.RELU },
+			{ nodeCount: 1, type: "output", activationfunc: activation.RELU }
 		],
 		mutationRate: 0.05,
 		crossoverMethod: crossover.RANDOM,
 		mutationMethod: mutate.RANDOM,
-		populationSize: 1000
+		populationSize: 10
 	};
 
 
 	let neat = new NEAT(config);
+	let w = [];
+
+	for (let i = 0; i < 1000; i++) w.push(1);
+	neat.creatures[1].setInputs([1, 1, 1, 1, 1]);
+
+	neat.creatures[1].setFlattenedGenes(w);
+
+	neat.feedForward();
 
 
-	for (let i = 0; i < neat.popsize; i++) {
-		neat.setInputs([1, 1, 1], i);
-	}
-
-	neat.predict();
-
-	var expected_output = 0.999329299739067;
 
 
-	expect(neat.population[0][1][neat.population[0][1].length - 1][0]).toBe(expected_output);
+
+	expect(neat.creatures[1].network.layers[2].getValues()[0]).toBe(31);
 });
-
-
-
