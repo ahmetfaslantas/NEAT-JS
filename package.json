@@ -1,6 +1,6 @@
 {
   "name": "neat_net-js",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "A JavaScript library implementing the NEAT algorithm",
   "main": "./lib/NEAT.js",
   "directories": {
