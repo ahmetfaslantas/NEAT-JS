@@ -69,14 +69,6 @@ function draw() {
       }
     }
 
-    if(frameCount % 10 == 0) {
-      let net = neat.creatures[neat.bestCreature()].network.getTensorflowModel();
-      let data = birds[neat.bestCreature()].inputss(pipes);
-
-      console.log(net.predict(tf.tensor([data])).array());
-      console.log(desicions[neat.bestCreature()]);
-    }
-
     let finish = true;
     for (let z = 0; z < birds.length; z++) {
       if (!birds[z].dead) {
