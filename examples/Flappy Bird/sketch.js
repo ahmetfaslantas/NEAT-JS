@@ -62,11 +62,19 @@ function draw() {
 
     neat.feedForward();
 
-	let desicions = neat.getDesicions();
+	  let desicions = neat.getDesicions();
     for (let i = 0; i < TOTAL; i++) {
       if (desicions[i] === 1) {
         birds[i].up();
       }
+    }
+
+    if(frameCount % 10 == 0) {
+      let net = neat.creatures[neat.bestCreature()].network.getTensorflowModel();
+      let data = birds[neat.bestCreature()].inputss(pipes);
+
+      console.log(net.predict(tf.tensor([data])).array());
+      console.log(desicions[neat.bestCreature()]);
     }
 
     let finish = true;
