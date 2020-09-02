@@ -62,7 +62,7 @@ function draw() {
 
     neat.feedForward();
 
-	let desicions = neat.getDesicions();
+	  let desicions = neat.getDesicions();
     for (let i = 0; i < TOTAL; i++) {
       if (desicions[i] === 1) {
         birds[i].up();
